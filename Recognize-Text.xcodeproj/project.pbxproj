@@ -12,6 +12,7 @@
 		E911CE4B2B5076C300AC904F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE4A2B5076C300AC904F /* Assets.xcassets */; };
 		E911CE4E2B5076C300AC904F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */; };
 		E911CE592B51A07B00AC904F /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE582B51A07B00AC904F /* StartButton.swift */; };
+		E911CE5B2B51A24D00AC904F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE5A2B51A24D00AC904F /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E911CE4A2B5076C300AC904F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E911CE582B51A07B00AC904F /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		E911CE5A2B51A24D00AC904F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				E911CE542B51A04D00AC904F /* Scene */,
+				E911CE5C2B51A25200AC904F /* Resource */,
 				E911CE462B5076C200AC904F /* Recognize_TextApp.swift */,
-				E911CE4A2B5076C300AC904F /* Assets.xcassets */,
 				E911CE4C2B5076C300AC904F /* Preview Content */,
 			);
 			path = "Recognize-Text";
@@ -100,6 +102,15 @@
 				E911CE582B51A07B00AC904F /* StartButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		E911CE5C2B51A25200AC904F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE4A2B5076C300AC904F /* Assets.xcassets */,
+				E911CE5A2B51A24D00AC904F /* Colors.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E911CE5B2B51A24D00AC904F /* Colors.xcassets in Resources */,
 				E911CE4E2B5076C300AC904F /* Preview Assets.xcassets in Resources */,
 				E911CE4B2B5076C300AC904F /* Assets.xcassets in Resources */,
 			);
