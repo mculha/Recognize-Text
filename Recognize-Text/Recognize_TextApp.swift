@@ -11,7 +11,7 @@ import SwiftUI
 struct Recognize_TextApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartScanningView()
         }
     }
 }

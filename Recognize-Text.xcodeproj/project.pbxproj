@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E911CE472B5076C200AC904F /* Recognize_TextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE462B5076C200AC904F /* Recognize_TextApp.swift */; };
-		E911CE492B5076C200AC904F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE482B5076C200AC904F /* ContentView.swift */; };
+		E911CE492B5076C200AC904F /* StartScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE482B5076C200AC904F /* StartScanningView.swift */; };
 		E911CE4B2B5076C300AC904F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE4A2B5076C300AC904F /* Assets.xcassets */; };
 		E911CE4E2B5076C300AC904F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */; };
+		E911CE592B51A07B00AC904F /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE582B51A07B00AC904F /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E911CE432B5076C200AC904F /* Recognize-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recognize-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E911CE462B5076C200AC904F /* Recognize_TextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognize_TextApp.swift; sourceTree = "<group>"; };
-		E911CE482B5076C200AC904F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E911CE482B5076C200AC904F /* StartScanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScanningView.swift; sourceTree = "<group>"; };
 		E911CE4A2B5076C300AC904F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E911CE582B51A07B00AC904F /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,8 @@
 		E911CE452B5076C200AC904F /* Recognize-Text */ = {
 			isa = PBXGroup;
 			children = (
+				E911CE542B51A04D00AC904F /* Scene */,
 				E911CE462B5076C200AC904F /* Recognize_TextApp.swift */,
-				E911CE482B5076C200AC904F /* ContentView.swift */,
 				E911CE4A2B5076C300AC904F /* Assets.xcassets */,
 				E911CE4C2B5076C300AC904F /* Preview Content */,
 			);
@@ -65,6 +67,39 @@
 				E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E911CE542B51A04D00AC904F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE562B51A06700AC904F /* Custom */,
+				E911CE552B51A05D00AC904F /* StartScanning */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E911CE552B51A05D00AC904F /* StartScanning */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE482B5076C200AC904F /* StartScanningView.swift */,
+			);
+			path = StartScanning;
+			sourceTree = "<group>";
+		};
+		E911CE562B51A06700AC904F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE572B51A06E00AC904F /* Button */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		E911CE572B51A06E00AC904F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE582B51A07B00AC904F /* StartButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E911CE492B5076C200AC904F /* ContentView.swift in Sources */,
+				E911CE592B51A07B00AC904F /* StartButton.swift in Sources */,
+				E911CE492B5076C200AC904F /* StartScanningView.swift in Sources */,
 				E911CE472B5076C200AC904F /* Recognize_TextApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
