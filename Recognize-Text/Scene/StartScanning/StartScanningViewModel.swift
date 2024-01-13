@@ -15,6 +15,7 @@ import VisionKit
 final class StartScanningViewModel {
     
     var presentDocumentCamera: Bool = false
+    var path: [String] = []
     
     @ObservationIgnored
     private var textRecognitionRequest = VNRecognizeTextRequest()
@@ -30,8 +31,7 @@ final class StartScanningViewModel {
                 scannedText += candidate.string
                 scannedText += "\n"
             }
-            
-            print("Text: \(scannedText)")
+            self.path.append(scannedText)
         }
         textRecognitionRequest.recognitionLevel = .accurate
         textRecognitionRequest.usesLanguageCorrection = true
@@ -49,6 +49,7 @@ final class StartScanningViewModel {
                 self.processImage(image)
             }
         case .failure(let failure):
+            //TODO - Build HERE
             break
         }
     }

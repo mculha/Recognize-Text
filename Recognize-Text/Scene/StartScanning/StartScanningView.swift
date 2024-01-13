@@ -14,13 +14,17 @@ struct StartScanningView: View {
     @State private var viewModel: StartScanningViewModel = .init()
     
     var body: some View {
-        ZStack {
-         
-            Rectangle().fill(Color(.scanningBG).gradient)
-                .ignoresSafeArea()
-            
-            Button(action: self.viewModel.startScanning) {
-                StartButton()
+        NavigationStack(path: $viewModel.path) {
+            ZStack {
+                Rectangle().fill(Color(.scanningBG).gradient)
+                    .ignoresSafeArea()
+                
+                Button(action: self.viewModel.startScanning) {
+                    StartButton()
+                }
+            }
+            .navigationDestination(for: String.self) { result in
+                ResultView(viewModel: .init(scannedText: result))
             }
         }
         .fullScreenCover(isPresented: $viewModel.presentDocumentCamera) {

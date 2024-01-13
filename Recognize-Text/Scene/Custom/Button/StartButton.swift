@@ -44,7 +44,9 @@ struct StartButton: View {
         }
         .frame(width: 150, height: 150)
         .onAppear {
-            self.wave.toggle()
+            DispatchQueue.main.async {
+                self.wave.toggle()
+            }
         }
     }
 }
