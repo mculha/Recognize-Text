@@ -13,6 +13,8 @@
 		E911CE4E2B5076C300AC904F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */; };
 		E911CE592B51A07B00AC904F /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE582B51A07B00AC904F /* StartButton.swift */; };
 		E911CE5B2B51A24D00AC904F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E911CE5A2B51A24D00AC904F /* Colors.xcassets */; };
+		E911CE5E2B52F28500AC904F /* StartScanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE5D2B52F28500AC904F /* StartScanningViewModel.swift */; };
+		E911CE612B5307D200AC904F /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE602B5307D200AC904F /* DocumentCameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		E911CE4D2B5076C300AC904F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E911CE582B51A07B00AC904F /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		E911CE5A2B51A24D00AC904F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E911CE5D2B52F28500AC904F /* StartScanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScanningViewModel.swift; sourceTree = "<group>"; };
+		E911CE602B5307D200AC904F /* DocumentCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		E911CE452B5076C200AC904F /* Recognize-Text */ = {
 			isa = PBXGroup;
 			children = (
+				E911CE5F2B5307C400AC904F /* Represantable */,
 				E911CE542B51A04D00AC904F /* Scene */,
 				E911CE5C2B51A25200AC904F /* Resource */,
 				E911CE462B5076C200AC904F /* Recognize_TextApp.swift */,
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E911CE482B5076C200AC904F /* StartScanningView.swift */,
+				E911CE5D2B52F28500AC904F /* StartScanningViewModel.swift */,
 			);
 			path = StartScanning;
 			sourceTree = "<group>";
@@ -111,6 +117,14 @@
 				E911CE5A2B51A24D00AC904F /* Colors.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		E911CE5F2B5307C400AC904F /* Represantable */ = {
+			isa = PBXGroup;
+			children = (
+				E911CE602B5307D200AC904F /* DocumentCameraView.swift */,
+			);
+			path = Represantable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,8 @@
 			files = (
 				E911CE592B51A07B00AC904F /* StartButton.swift in Sources */,
 				E911CE492B5076C200AC904F /* StartScanningView.swift in Sources */,
+				E911CE612B5307D200AC904F /* DocumentCameraView.swift in Sources */,
+				E911CE5E2B52F28500AC904F /* StartScanningViewModel.swift in Sources */,
 				E911CE472B5076C200AC904F /* Recognize_TextApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,11 +339,13 @@
 				DEVELOPMENT_TEAM = 8F8TZUV25Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires your permission to scan text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,11 +370,13 @@
 				DEVELOPMENT_TEAM = 8F8TZUV25Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires your permission to scan text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

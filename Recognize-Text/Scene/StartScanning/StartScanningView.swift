@@ -6,23 +6,29 @@
 //
 
 import SwiftUI
+import Vision
+import VisionKit
 
 struct StartScanningView: View {
+    
+    @State private var viewModel: StartScanningViewModel = .init()
+    
     var body: some View {
         ZStack {
          
-            Rectangle().fill(.black.gradient)
+            Rectangle().fill(Color(.scanningBG).gradient)
                 .ignoresSafeArea()
             
-            Button(action: self.startScanning) {
+            Button(action: self.viewModel.startScanning) {
                 StartButton()
             }
         }
+        .fullScreenCover(isPresented: $viewModel.presentDocumentCamera) {
+            DocumentCameraView()
+                .ignoresSafeArea()
+        }
     }
     
-    private func startScanning() {
-        
-    }
 }
 
 #Preview {
