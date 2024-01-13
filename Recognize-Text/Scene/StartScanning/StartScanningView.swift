@@ -24,7 +24,7 @@ struct StartScanningView: View {
             }
         }
         .fullScreenCover(isPresented: $viewModel.presentDocumentCamera) {
-            DocumentCameraView()
+            DocumentCameraView(result: viewModel.didFinish(result:))
                 .ignoresSafeArea()
         }
     }

@@ -12,21 +12,27 @@ import Vision
 
 struct DocumentCameraView: UIViewControllerRepresentable {
     
+    public typealias UIViewControllerType = VNDocumentCameraViewController
+    public typealias CameraResult = Result<VNDocumentCameraScan, Error>
+    public typealias ResultAction = (CameraResult) -> Void
+    
+    private let result: ResultAction
+    
+    init(result: @escaping ResultAction) {
+        self.result = result
+    }
+    
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)
     }
-    
-    typealias UIViewControllerType = VNDocumentCameraViewController
-    
+        
     func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
         let documentCamera = VNDocumentCameraViewController()
         documentCamera.delegate = context.coordinator
         return documentCamera
     }
     
-    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
-        
-    }
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) { }
     
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         
@@ -37,7 +43,17 @@ struct DocumentCameraView: UIViewControllerRepresentable {
         }
         
         func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-           //TODO - Build HERE
+            controller.dismiss(animated: true) {
+                self.parent.result(.success(scan))
+            }
+        }
+        
+        func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+            controller.dismiss(animated: true)
+        }
+        
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+            controller.dismiss(animated: true)
         }
     }
 }
