@@ -12,7 +12,14 @@ struct ResultView: View {
     @State var viewModel: ResultViewModel
     
     var body: some View {
-        Text(viewModel.scannedText)
+        ZStack {
+            Rectangle().fill(Color(.scanningBG).gradient)
+                .ignoresSafeArea()
+            
+            Text(viewModel.scannedText)
+                .foregroundStyle(.white)
+                .font(.title3)
+        }
     }
 }
 

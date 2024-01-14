@@ -27,9 +27,15 @@ struct StartScanningView: View {
                 ResultView(viewModel: .init(scannedText: result))
             }
         }
+        .tint(.white)
         .fullScreenCover(isPresented: $viewModel.presentDocumentCamera) {
             DocumentCameraView(result: viewModel.didFinish(result:))
                 .ignoresSafeArea()
+        }
+        .alert("Something went wrong!", isPresented: $viewModel.isErrorPresented, presenting: viewModel.errorMessage) { message in
+            Button("OK") { }
+        } message: { message in
+            Text(message)
         }
     }
     

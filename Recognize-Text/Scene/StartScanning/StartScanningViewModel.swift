@@ -16,14 +16,30 @@ final class StartScanningViewModel {
     
     var presentDocumentCamera: Bool = false
     var path: [String] = []
+    var isErrorPresented: Bool = false
+    var errorMessage: String?
     
     @ObservationIgnored
     private var textRecognitionRequest = VNRecognizeTextRequest()
-
+    
     init() {
+        self.initiliazeRecognizeTextRequest()
+    }
+
+    func startScanning() {
+        self.presentDocumentCamera = true
+    }
+}
+
+//MARK - For Vision and VisionKit
+extension StartScanningViewModel {
+    
+    private func initiliazeRecognizeTextRequest() {
         textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             guard let results = request.results, !results.isEmpty else { return }
             guard let requestResults = results as? [VNRecognizedTextObservation] else { return }
+            
+            print("Deneme Completion Handler Triggered")
             
             var scannedText: String = ""
             for observation in requestResults {
@@ -37,8 +53,10 @@ final class StartScanningViewModel {
         textRecognitionRequest.usesLanguageCorrection = true
     }
     
-    func startScanning() {
-        self.presentDocumentCamera = true
+    private func processImage(_ image: UIImage) {
+        guard let cgImage = image.cgImage else { return }
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        try? handler.perform([textRecognitionRequest])
     }
     
     func didFinish(result: Result<VNDocumentCameraScan, Error>) {
@@ -49,14 +67,9 @@ final class StartScanningViewModel {
                 self.processImage(image)
             }
         case .failure(let failure):
-            //TODO - Build HERE
+            self.errorMessage = failure.localizedDescription
+            self.isErrorPresented = true
             break
         }
-    }
-    
-    private func processImage(_ image: UIImage) {
-        guard let cgImage = image.cgImage else { return }
-        let handler = VNImageRequestHandler(cgImage: cgImage)
-        try? handler.perform([textRecognitionRequest])
     }
 }

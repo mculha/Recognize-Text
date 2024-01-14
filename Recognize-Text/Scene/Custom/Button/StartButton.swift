@@ -24,14 +24,6 @@ struct StartButton: View {
                 .animation(.easeInOut(duration: duration).repeatForever(autoreverses: false), value: wave)
             
             Circle()
-                .stroke(lineWidth: 1)
-                .frame(width: 150, height: 150)
-                .foregroundStyle(Color(.btnStartBG))
-                .scaleEffect(wave ? 1.5 : 1)
-                .opacity(wave ? 0 : 1)
-                .animation(.easeInOut(duration: duration).repeatForever(autoreverses: false).delay(0.5), value: wave)
-            
-            Circle()
                 .frame(width: 150, height: 150)
                 .foregroundStyle(Color(.btnStartBG))
                 .shadow(radius: 25)
@@ -44,8 +36,9 @@ struct StartButton: View {
         }
         .frame(width: 150, height: 150)
         .onAppear {
+            guard !self.wave else { return }
             DispatchQueue.main.async {
-                self.wave.toggle()
+                self.wave = true
             }
         }
     }
