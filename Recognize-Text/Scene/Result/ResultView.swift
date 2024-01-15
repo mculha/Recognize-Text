@@ -16,13 +16,15 @@ struct ResultView: View {
             Rectangle().fill(Color(.scanningBG).gradient)
                 .ignoresSafeArea()
             
-            Text(viewModel.scannedText)
-                .foregroundStyle(.white)
-                .font(.title3)
+            ScrollView {
+                Text(viewModel.model.text)
+                    .foregroundStyle(.white)
+                    .font(.system(size: 10))
+            }
         }
     }
 }
 
 #Preview {
-    ResultView(viewModel: .init(scannedText: "Test Text"))
+    ResultView(viewModel: .init(model: .init(image: UIImage(), text: "Test Text")))
 }

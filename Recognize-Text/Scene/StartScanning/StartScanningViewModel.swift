@@ -10,17 +10,18 @@ import SwiftUI
 import Vision
 import VisionKit
 
-
 @Observable
 final class StartScanningViewModel {
     
     var presentDocumentCamera: Bool = false
-    var path: [String] = []
+    var path: [RecognizeTextResultModel] = []
     var isErrorPresented: Bool = false
     var errorMessage: String?
     
     @ObservationIgnored
     private var textRecognitionRequest = VNRecognizeTextRequest()
+    @ObservationIgnored
+    private var image: UIImage?
     
     init() {
         self.initiliazeRecognizeTextRequest()
@@ -38,16 +39,15 @@ extension StartScanningViewModel {
         textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             guard let results = request.results, !results.isEmpty else { return }
             guard let requestResults = results as? [VNRecognizedTextObservation] else { return }
-            
-            print("Deneme Completion Handler Triggered")
-            
+            guard let image = self.image else { return }
             var scannedText: String = ""
             for observation in requestResults {
                 guard let candidate = observation.topCandidates(1).first else { return }
                 scannedText += candidate.string
                 scannedText += "\n"
             }
-            self.path.append(scannedText)
+            
+            self.path.append(.init(image: image, text: scannedText))
         }
         textRecognitionRequest.recognitionLevel = .accurate
         textRecognitionRequest.usesLanguageCorrection = true
@@ -55,6 +55,7 @@ extension StartScanningViewModel {
     
     private func processImage(_ image: UIImage) {
         guard let cgImage = image.cgImage else { return }
+        self.image = image
         let handler = VNImageRequestHandler(cgImage: cgImage)
         try? handler.perform([textRecognitionRequest])
     }

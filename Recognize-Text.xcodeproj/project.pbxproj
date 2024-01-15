@@ -17,6 +17,7 @@
 		E911CE612B5307D200AC904F /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE602B5307D200AC904F /* DocumentCameraView.swift */; };
 		E911CE642B531FE900AC904F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE632B531FE900AC904F /* ResultView.swift */; };
 		E911CE662B531FFF00AC904F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911CE652B531FFF00AC904F /* ResultViewModel.swift */; };
+		E9CE5BEF2B55B1A8006C31B5 /* RecognizeTextResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CE5BEE2B55B1A8006C31B5 /* RecognizeTextResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E911CE602B5307D200AC904F /* DocumentCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
 		E911CE632B531FE900AC904F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E911CE652B531FFF00AC904F /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		E9CE5BEE2B55B1A8006C31B5 /* RecognizeTextResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeTextResultModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,9 @@
 		E911CE452B5076C200AC904F /* Recognize-Text */ = {
 			isa = PBXGroup;
 			children = (
-				E911CE5F2B5307C400AC904F /* Represantable */,
 				E911CE542B51A04D00AC904F /* Scene */,
+				E9CE5BED2B55B183006C31B5 /* Model */,
+				E911CE5F2B5307C400AC904F /* Represantable */,
 				E911CE5C2B51A25200AC904F /* Resource */,
 				E911CE462B5076C200AC904F /* Recognize_TextApp.swift */,
 				E911CE4C2B5076C300AC904F /* Preview Content */,
@@ -139,6 +142,14 @@
 				E911CE652B531FFF00AC904F /* ResultViewModel.swift */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		E9CE5BED2B55B183006C31B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9CE5BEE2B55B1A8006C31B5 /* RecognizeTextResultModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				E911CE662B531FFF00AC904F /* ResultViewModel.swift in Sources */,
 				E911CE492B5076C200AC904F /* StartScanningView.swift in Sources */,
 				E911CE612B5307D200AC904F /* DocumentCameraView.swift in Sources */,
+				E9CE5BEF2B55B1A8006C31B5 /* RecognizeTextResultModel.swift in Sources */,
 				E911CE5E2B52F28500AC904F /* StartScanningViewModel.swift in Sources */,
 				E911CE472B5076C200AC904F /* Recognize_TextApp.swift in Sources */,
 				E911CE642B531FE900AC904F /* ResultView.swift in Sources */,

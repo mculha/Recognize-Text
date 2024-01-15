@@ -23,8 +23,8 @@ struct StartScanningView: View {
                     StartButton()
                 }
             }
-            .navigationDestination(for: String.self) { result in
-                ResultView(viewModel: .init(scannedText: result))
+            .navigationDestination(for: RecognizeTextResultModel.self) { result in
+                ResultView(viewModel: .init(model: result))
             }
         }
         .tint(.white)

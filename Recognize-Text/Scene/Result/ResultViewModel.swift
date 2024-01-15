@@ -11,9 +11,9 @@ import Foundation
 final class ResultViewModel {
     
     @ObservationIgnored
-    let scannedText: String
+    let model: RecognizeTextResultModel
     
-    init(scannedText: String) {
-        self.scannedText = scannedText
+    init(model: RecognizeTextResultModel) {
+        self.model = model
     }
 }
