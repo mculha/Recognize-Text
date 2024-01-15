@@ -15,11 +15,21 @@ struct ResultView: View {
         ZStack {
             Rectangle().fill(Color(.scanningBG).gradient)
                 .ignoresSafeArea()
-            
-            ScrollView {
-                Text(viewModel.model.text)
-                    .foregroundStyle(.white)
-                    .font(.system(size: 10))
+            VStack {
+                Image(uiImage: viewModel.model.image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .frame(minWidth: 100, minHeight: 100)
+                    .padding(20)
+                    
+                
+                ScrollView {
+                    Text(viewModel.model.text)
+                        .foregroundStyle(.white)
+                        .font(.system(size: 12))
+                        .frame(maxWidth: .infinity)
+                }
             }
         }
     }

@@ -367,6 +367,7 @@
 				DEVELOPMENT_TEAM = 8F8TZUV25Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Recognize Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires your permission to scan text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +399,7 @@
 				DEVELOPMENT_TEAM = 8F8TZUV25Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Recognize Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app requires your permission to scan text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
