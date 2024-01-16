@@ -14,3 +14,5 @@ Accurate:
   > The accurate path uses a neural network to find text in terms of strings and lines, and then performs further analysis to find individual words and sentences. This approach is much more in line with how humans read text.
 
 Both are selectable according to the app requirements. To minimize potential misreadings, the accurate way must be chosen.
+
+The project scans the text as it is. If you have a particular structure the text can be organized as what the structure is such as a survey or an exam documentation vs.
