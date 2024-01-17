@@ -70,7 +70,6 @@ extension StartScanningViewModel {
         case .failure(let failure):
             self.errorMessage = failure.localizedDescription
             self.isErrorPresented = true
-            break
         }
     }
 }
