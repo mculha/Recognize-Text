@@ -30,6 +30,7 @@ struct ResultView: View {
                         .font(.system(size: 12))
                         .frame(maxWidth: .infinity)
                 }
+                .padding([.horizontal], 20)
             }
         }
     }
