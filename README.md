@@ -16,3 +16,15 @@ Accurate:
 Both are selectable according to the app requirements. To minimize potential misreadings, the accurate way must be chosen.
 
 The project scans the text as it is. If you have a particular structure the text can be organized as what the structure is such as a survey or an exam documentation vs.
+
+There are two options to manage scanning.
+First, once the camera opens and detects documentation the app might take a photo as soon as the documentation is detected. After that, the app scans and turns the documentation into digital.
+
+https://github.com/mculha/Recognize-Text/assets/20414142/25a4df09-9dff-452f-a0b6-7dda7f86b72c
+
+</br>
+Second, once the camera opens, the user takes a photo and rearranges the edge of the documentation before it is scanned.
+
+
+https://github.com/mculha/Recognize-Text/assets/20414142/00807ca5-2945-40a0-93f5-fb06c7d6f1ca
+
